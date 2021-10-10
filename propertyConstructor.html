@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Constructor</title>
+</head>
+
+<body>
+    <script>
+        //Constructor Function, menggunakan huruf besar
+        function PremiumMember() {
+            this.firstname = "",
+                this.lastname = ""
+        }
+
+        const eko = new PremiumMember();
+        eko.firstname = "Eko";
+        eko.lastname = "Sanjaya";
+        const budi = new PremiumMember();
+        // budi.firstname = "Budi";
+
+        console.info(eko);
+        console.info(budi);
+    </script>
+</body>
+
+</html>
