@@ -15,8 +15,9 @@
             lastname;
             balance = 0;
 
-            constructor() {
-
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
             }
 
             sayHello() {
@@ -24,7 +25,7 @@
             }
         }
 
-        const eko = new Customer();
+        const eko = new Customer("Eko", "Setiawan");
         console.info(eko);
     </script>
 </body>
