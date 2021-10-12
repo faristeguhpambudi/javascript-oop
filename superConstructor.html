@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Constructor</title>
+</head>
+
+<body>
+    <script>
+        //KATA KUNCINYA EXTENDS
+        class Employee{
+            constructor(firstname) {
+                this.firstname = firstname;
+            }
+
+            sayHello(name)
+            {
+                console.info(`Hello ${name}, My Name is Employee ${this.firstname}`);
+            }
+        }
+
+        class Manager extends Employee{
+            constructor(firstname, lastname)
+            {
+                super(firstname);
+                this.lastname = lastname;
+            }
+            sayHello(name)
+            {
+                console.info(`Hello ${name}, My Name is Manager ${this.firstname} ${this.lastname}`);
+            }
+        }
+
+        //buat instance employee
+        const budi = new Employee("Budi");
+        budi.sayHello("Orang-Orang");
+
+        //buat instance manager
+        const eko = new Manager("Eko","Sanjaya");
+        eko.sayHello("Orang-Orang");
+
+        //cek struktur instance
+        console.info(budi);
+        console.info(eko);
+    </script>
+</body>
+
+</html>
