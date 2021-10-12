@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance di Class</title>
+</head>
+
+<body>
+    <script>
+        //KATA KUNCINYA EXTENDS
+        class Employee{
+            // constructor(name) {
+            //     this.name = name;
+            // }
+
+            sayHello(name)
+            {
+                console.info(`Hello ${name}, My Name is Employee ${this.name}`);
+            }
+        }
+
+        class Manager extends Employee{
+            sayHello(name)
+            {
+                console.info(`Hello ${name}, My Name is Manager ${this.name}`);
+            }
+        }
+
+        //buat instance employee
+        const budi = new Employee();
+        budi.name = "Budi"
+        budi.sayHello("Orang-Orang");
+
+        //buat instance manager
+        const eko = new Manager();
+        eko.name = "Eko";
+        eko.sayHello("Orang-Orang");
+
+        //cek struktur instance
+        console.info(budi);
+        console.info(eko);
+    </script>
+</body>
+
+</html>
