@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+    <script>
+        //KATA KUNCINYA THROW
+        class MathUtil {
+            static sum(...numbers) {
+                if (numbers.length === 0) {
+                    throw Error('Total Parameter harus lebih dari 0');
+                }
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+
+                return total;
+            }
+        }
+
+        try {
+            const result = MathUtil.sum(); //tidak mengirimkan parameter
+            console.info(result);
+        } catch (error) {
+            console.info(`Terjadi Error : ${error.message}`);
+        } finally { //finanlly akan dijalankan ketika ada error ataupun tidak
+            console.info("Kode Program selesai");
+        }
+    </script>
+
+</body>
+
+</html>
